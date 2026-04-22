@@ -1,0 +1,19 @@
+# dbt
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# profiles (contains credentials - never commit)
+profiles.yml
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db

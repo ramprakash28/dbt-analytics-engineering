@@ -1,0 +1,12 @@
+analytics_engineering:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: YOUR_POSTGRES_USER
+      password: YOUR_POSTGRES_PASSWORD
+      port: 5432
+      dbname: YOUR_DATABASE_NAME
+      schema: dbt_dev
+      threads: 4

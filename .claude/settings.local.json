@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__github__create_repository",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git pull *)",
+      "Bash(git branch *)",
+      "Bash(git fetch *)",
+      "Bash(git reset *)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
+    ]
+  }
+}
