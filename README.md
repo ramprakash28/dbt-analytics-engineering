@@ -1,9 +1,6 @@
-# dbt Analytics Engineering — Learning Project
+# dbt Analytics Engineering 
 
-Hands-on dbt project built alongside the **Coursera: Introduction to Analytics Engineering** course by Edureka.
-
-## Course Modules Covered
-- [x] Module 1: Intro to Analytics Engineering & the Modern Data Stack (ELT vs ETL, SQL, PostgreSQL, dbt Docs)
+Hands-on dbt project 
 
 ## Tech Stack
 - **Warehouse:** PostgreSQL (local)
