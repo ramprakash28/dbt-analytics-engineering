@@ -1,0 +1,21 @@
+order_id,customer_id,product_name,product_category,quantity,price
+1,101,Wireless Mouse,Electronics,2,29.99
+2,102,Office Chair,Furniture,1,249.99
+3,103,Notebook Pack,Stationery,5,12.49
+4,104,USB-C Hub,Electronics,1,49.99
+5,105,Standing Desk,Furniture,1,399.99
+6,101,Mechanical Keyboard,Electronics,1,89.99
+7,106,Ballpoint Pens,Stationery,10,7.99
+8,107,Monitor 27inch,Electronics,2,319.99
+9,108,Desk Lamp,Furniture,3,34.99
+10,102,Sticky Notes,Stationery,8,5.49
+11,109,Webcam HD,Electronics,1,74.99
+12,110,Bookshelf,Furniture,1,129.99
+13,103,Highlighters,Stationery,4,8.99
+14,111,Noise Cancelling Headphones,Electronics,1,199.99
+15,104,Ergonomic Mouse Pad,Furniture,2,19.99
+16,112,Stapler,Stationery,1,14.99
+17,105,Laptop Stand,Electronics,1,59.99
+18,113,Filing Cabinet,Furniture,1,179.99
+19,106,Printer Paper,Stationery,6,11.99
+20,114,Portable SSD,Electronics,2,109.99
