@@ -7,6 +7,48 @@ Hands-on dbt project built as part of the Coursera **Intro to Analytics Engineer
 - **Transformation:** dbt (data build tool)
 - **Version Control:** GitHub
 
+---
+
+## How This Project Was Built
+
+### 1. Project Setup
+- Created the `DBT/` folder as the project root
+- Ran `dbt init` to scaffold the project structure — this created `models/`, `seeds/`, `analyses/`, `macros/`, `tests/`, and `dbt_project.yml`
+
+### 2. Connection
+- Configured `~/.dbt/profiles.yml` with PostgreSQL credentials (host, port, user, password, database)
+- Ran `dbt debug` to confirm the connection worked
+
+### 3. Seed Data
+- Created `seeds/customers.csv` and `seeds/orders.csv` as the raw data source
+- Ran `dbt seed` to load them as tables into PostgreSQL
+
+### 4. Staging Models (`models/staging/`)
+- Created `stg_customers.sql` and `stg_orders.sql`
+- These SELECT and clean data from the seed tables using `{{ ref() }}`
+- Defined data quality tests in `staging.yml`
+
+### 5. Mart Models (`models/marts/`)
+- Created `dim_customer.sql`, `dim_product.sql`, `dim_date.sql`, `fact_orders.sql`
+- These build a star schema by joining and reshaping the staging data
+- Defined tests and documentation in `marts.yml`
+
+### 6. Run and Test
+```bash
+dbt seed    # load CSV files into PostgreSQL
+dbt run     # build all models
+dbt test    # validate data quality
+```
+
+### Final Result in PostgreSQL (`dbt` schema)
+```
+seeds (CSV files)
+    └── staging models (views) ── stg_customers, stg_orders
+            └── mart models (tables) ── dim_customer, dim_product, dim_date, fact_orders
+```
+
+---
+
 ## Project Structure
 ```
 dbt-analytics-engineering/
@@ -31,6 +73,8 @@ dbt-analytics-engineering/
 └── profiles.yml.example   # Example connection config
 ```
 
+---
+
 ## Data Model (Star Schema)
 
 ```
@@ -47,6 +91,8 @@ dim_customer ── fact_orders ── dim_product
 | `dim_product` | table | Product dimension (20 unique products) |
 | `dim_date` | table | Date dimension (all days in 2025) |
 | `fact_orders` | table | Order facts with keys to all dimensions (20 rows) |
+
+---
 
 ## Setup Instructions
 
